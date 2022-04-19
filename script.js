@@ -100,8 +100,8 @@ equals.addEventListener('click', () => {
     .replaceAll('ans',ans)
     .replaceAll('^','**');
 
-    answer.textContent = eval(myStr);
-    ans = eval(myStr);
+    answer.textContent = Function('return ' + myStr)();
+    ans = Function('return ' + myStr)();
     input.textContent = "";
     myStr = "";
     myArr = [];
