@@ -112,8 +112,11 @@ equals.addEventListener('click', () => {
 const random = document.querySelector('#random');
 random.addEventListener('click', () => {
     ran = Math.random();
-    myArr.push(ran);
-
+    if (oper == 0) {
+        myArr.push(" * " + ran)
+    } else {
+        myArr.push(ran);
+    }
     input.textContent = myArr.toString()
     .replaceAll(',', '')
     .replaceAll(ran,'random')
