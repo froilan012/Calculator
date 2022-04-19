@@ -9,7 +9,7 @@ var myArr = [];
 var result = "";
 var ans = 0;
 var prevAnswer = 0;
-var a = 0;
+var a = 1;
 var ran = 0;
 var oper = 1;
 
@@ -18,10 +18,10 @@ btn.forEach((button) => {
         myArr.push(button.value);
 
         input.textContent = myArr.toString()
-        .replaceAll(',', '')
-        .replaceAll(ran,'random')
-        .replaceAll('*','x')
-        .replaceAll('/','÷');
+            .replaceAll(',', '')
+            .replaceAll(ran,'random')
+            .replaceAll('*','x')
+            .replaceAll('/','÷');
 
         a = 0;
         oper = 0;
@@ -32,15 +32,17 @@ operator.forEach((button) => {
     button.addEventListener('click', () => {
         if (a == 1) {
             myArr.push('ans');
-        }
+            a = 0;
+        };
         myArr.push(' ' + button.value + ' ');
         input.textContent = myArr.toString()
-        .replaceAll(',', '')
-        .replaceAll(ran,'random')
-        .replaceAll('*','x')
-        .replaceAll('/','÷');
+            .replaceAll(',', '')
+            .replaceAll(ran,'random')
+            .replaceAll('*','x')
+            .replaceAll('/','÷');
 
         oper = 1;
+        console.log(myArr);
     });
 });
 
@@ -58,8 +60,6 @@ clear.addEventListener('click', () => {
         a = 1;
         oper = 1;
     }
-    console.log(a)
-
 });
 
 const clearAll = document.querySelector('#clear-all');
@@ -71,7 +71,7 @@ clearAll.addEventListener('click', () => {
     result = "";
     ans = 0;
     prevAnswer = 0;
-    a = 0;
+    a = 1;
     oper = 1;
 });
 
@@ -178,6 +178,63 @@ negative.addEventListener('click', () => {
     .replaceAll('/','÷');
 });
 
-if (myArr = []) {
-    a = 1;
-}
+window.addEventListener('keydown', () => {
+   if (isNaN(event.key) == false) {
+        myArr.push(event.key);
+
+        input.textContent = myArr.toString()
+            .replaceAll(',', '')
+            .replaceAll(ran,'random')
+            .replaceAll('*','x')
+            .replaceAll('/','÷');
+
+        a = 0;
+        oper = 0;
+   }
+
+   if (event.key == "Enter" || event.key == "=") {
+        myStr = myArr.toString()
+            .replaceAll(',', '')
+            .replaceAll('ans',ans)
+            .replaceAll('^','**');
+
+        answer.textContent = Function('return ' + myStr)();
+        ans = Function('return ' + myStr)();
+        input.textContent = "";
+        myStr = "";
+        myArr = [];
+        a = 1;
+        oper = 1;
+        console.log(myArr);
+        console.log(myStr);
+   }
+
+   if (event.key == "-" || event.key == "+" || event.key == "/" || event.key == "*") {
+        if (a == 1) {
+            myArr.push('ans');
+            }
+        myArr.push(' ' + event.key + ' ');
+        input.textContent = myArr.toString()
+            .replaceAll(',', '')
+            .replaceAll(ran,'random')
+            .replaceAll('*','x')
+            .replaceAll('/','÷');
+
+        oper = 1;
+   }
+
+   if (event.key == "Backspace") {
+        myArr.pop();
+
+        input.textContent = myArr.toString()
+            .replaceAll(',', '')
+            .replaceAll(ran,'random')
+            .replaceAll('*','x')
+            .replaceAll('/','÷');
+
+        if (input.textContent == "") {
+            a = 1;
+            oper = 1;
+        }
+    }
+});
