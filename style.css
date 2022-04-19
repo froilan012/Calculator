@@ -1,0 +1,89 @@
+* {
+    border: 1px solid white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.header {
+    text-align: center;
+}
+
+.calbody {
+    text-align: center;
+    height: 700px;
+    width: 500px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+.screen {
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+}
+
+.topscreen {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: xx-large;
+}
+
+.input {
+    height: 70%;
+    text-align: end;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: xx-large;
+}
+
+.left {
+    display: flex;
+}
+
+.answer {
+    margin-left: 20px;
+}
+
+.buttons {
+    display: flex;
+    height: 85%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button {
+    height: 70px;
+    width: 70px;
+    margin: 3%;
+    font-size: x-large;
+    border: 5px solid black;
+    border-radius:  20px;
+}
+
+.footer {
+    text-align: center;
+}
+
+#random {
+    font-size: small;
+    text-align: center;
+    font-weight: bold;
+}
