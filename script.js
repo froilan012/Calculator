@@ -237,4 +237,27 @@ window.addEventListener('keydown', () => {
             oper = 1;
         }
     }
+
+    if (event.key == "(") {
+        if (oper == 1) {
+            myArr.push(event.key);
+        }
+        if (oper == 0) {
+            myArr.push(' *' + event.key);
+        }
+        input.textContent = myArr.toString()
+            .replaceAll(',', '')
+            .replaceAll(ran,'random')
+            .replaceAll('*','x')
+            .replaceAll('/','÷');
+    }
+
+    if (event.key == ")") {
+        myArr.push(event.key);
+        input.textContent = myArr.toString()
+            .replaceAll(',', '')
+            .replaceAll(ran,'random')
+            .replaceAll('*','x')
+            .replaceAll('/','÷');
+    }
 });
