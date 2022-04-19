@@ -19,12 +19,12 @@ btn.forEach((button) => {
 
         input.textContent = myArr.toString()
             .replaceAll(',', '')
-            .replaceAll(ran,'random')
             .replaceAll('*','x')
             .replaceAll('/','÷');
 
         a = 0;
         oper = 0;
+        console.log(input.textContent);
     });
 });
 
@@ -37,7 +37,6 @@ operator.forEach((button) => {
         myArr.push(' ' + button.value + ' ');
         input.textContent = myArr.toString()
             .replaceAll(',', '')
-            .replaceAll(ran,'random')
             .replaceAll('*','x')
             .replaceAll('/','÷');
 
@@ -52,7 +51,6 @@ clear.addEventListener('click', () => {
 
     input.textContent = myArr.toString()
     .replaceAll(',', '')
-    .replaceAll(ran,'random')
     .replaceAll('*','x')
     .replaceAll('/','÷');
 
@@ -84,10 +82,9 @@ power.addEventListener('click', () => {
     myArr.push('^');
 
     input.textContent = myArr.toString()
-    .replaceAll(',', '')
-    .replaceAll(ran,'random')
-    .replaceAll('*','x')
-    .replaceAll('/','÷');
+        .replaceAll(',', '')
+        .replaceAll('*','x')
+        .replaceAll('/','÷');
 
     oper = 1;
 });
@@ -96,9 +93,9 @@ const equals = document.querySelector('#equals');
 equals.addEventListener('click', () => {
 
     myStr = myArr.toString()
-    .replaceAll(',', '')
-    .replaceAll('ans',ans)
-    .replaceAll('^','**');
+        .replaceAll(',', '')
+        .replaceAll('ans',ans)
+        .replaceAll('^','**');
 
     answer.textContent = Function('return ' + myStr)();
     ans = Function('return ' + myStr)();
@@ -119,7 +116,6 @@ random.addEventListener('click', () => {
     }
     input.textContent = myArr.toString()
     .replaceAll(',', '')
-    .replaceAll(ran,'random')
     .replaceAll('*','x')
     .replaceAll('/','÷');
 
@@ -133,7 +129,6 @@ prevAns.addEventListener('click', () => {
 
     input.textContent = myArr.toString()
     .replaceAll(',', '')
-    .replaceAll(ran,'random')
     .replaceAll('*','x')
     .replaceAll('/','÷');
 
@@ -152,7 +147,6 @@ openPar.addEventListener('click', () => {
 
     input.textContent = myArr.toString()
     .replaceAll(',', '')
-    .replaceAll(ran,'random')
     .replaceAll('*','x')
     .replaceAll('/','÷');
 
@@ -164,7 +158,6 @@ closePar.addEventListener('click', () => {
 
     input.textContent = myArr.toString()
     .replaceAll(',', '')
-    .replaceAll(ran,'random')
     .replaceAll('*','x')
     .replaceAll('/','÷');
 
@@ -176,7 +169,6 @@ negative.addEventListener('click', () => {
 
     input.textContent = myArr.toString()
     .replaceAll(',', '')
-    .replaceAll(ran,'random')
     .replaceAll('*','x')
     .replaceAll('/','÷');
 });
@@ -187,7 +179,6 @@ window.addEventListener('keydown', () => {
 
         input.textContent = myArr.toString()
             .replaceAll(',', '')
-            .replaceAll(ran,'random')
             .replaceAll('*','x')
             .replaceAll('/','÷');
 
@@ -219,7 +210,6 @@ window.addEventListener('keydown', () => {
         myArr.push(' ' + event.key + ' ');
         input.textContent = myArr.toString()
             .replaceAll(',', '')
-            .replaceAll(ran,'random')
             .replaceAll('*','x')
             .replaceAll('/','÷');
 
@@ -231,7 +221,6 @@ window.addEventListener('keydown', () => {
 
         input.textContent = myArr.toString()
             .replaceAll(',', '')
-            .replaceAll(ran,'random')
             .replaceAll('*','x')
             .replaceAll('/','÷');
 
@@ -250,7 +239,6 @@ window.addEventListener('keydown', () => {
         }
         input.textContent = myArr.toString()
             .replaceAll(',', '')
-            .replaceAll(ran,'random')
             .replaceAll('*','x')
             .replaceAll('/','÷');
     }
@@ -259,7 +247,6 @@ window.addEventListener('keydown', () => {
         myArr.push(event.key);
         input.textContent = myArr.toString()
             .replaceAll(',', '')
-            .replaceAll(ran,'random')
             .replaceAll('*','x')
             .replaceAll('/','÷');
     }
