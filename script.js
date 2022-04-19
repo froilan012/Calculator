@@ -31,6 +31,9 @@ btn.forEach((button) => {
     button.addEventListener('mouseup', () => {
         button.style.backgroundColor = 'aquamarine';
     });
+    button.addEventListener('mouseleave', () => {
+        button.style.backgroundColor = 'aquamarine';
+    });
 });
 
 operator.forEach((button) => {
@@ -51,6 +54,9 @@ operator.forEach((button) => {
         button.style.backgroundColor = 'yellow';
     });
     button.addEventListener('mouseup', () => {
+        button.style.backgroundColor = 'aquamarine';
+    });
+    button.addEventListener('mouseleave', () => {
         button.style.backgroundColor = 'aquamarine';
     });
 });
@@ -75,6 +81,9 @@ clear.addEventListener('mousedown', () => {
 clear.addEventListener('mouseup', () => {
     clear.style.backgroundColor = 'aquamarine';
 });
+clear.addEventListener('mouseleave', () => {
+    clear.style.backgroundColor = 'aquamarine';
+});
 
 const clearAll = document.querySelector('#clear-all');
 clearAll.addEventListener('click', () => {
@@ -92,6 +101,9 @@ clearAll.addEventListener('mousedown', () => {
     clearAll.style.backgroundColor = 'yellow';
 });
 clearAll.addEventListener('mouseup', () => {
+    clearAll.style.backgroundColor = 'aquamarine';
+});
+clearAll.addEventListener('mouseleave', () => {
     clearAll.style.backgroundColor = 'aquamarine';
 });
 
@@ -114,6 +126,9 @@ power.addEventListener('mousedown', () => {
     power.style.backgroundColor = 'yellow';
 });
 power.addEventListener('mouseup', () => {
+    power.style.backgroundColor = 'aquamarine';
+});
+power.addEventListener('mouseleave', () => {
     power.style.backgroundColor = 'aquamarine';
 });
 
@@ -139,6 +154,9 @@ equals.addEventListener('mousedown', () => {
 equals.addEventListener('mouseup', () => {
     equals.style.backgroundColor = 'aquamarine';
 });
+equals.addEventListener('mouseleave', () => {
+    equals.style.backgroundColor = 'aquamarine';
+});
 
 const random = document.querySelector('#random');
 random.addEventListener('click', () => {
@@ -162,6 +180,9 @@ random.addEventListener('mousedown', () => {
 random.addEventListener('mouseup', () => {
     random.style.backgroundColor = 'aquamarine';
 });
+random.addEventListener('mouseleave', () => {
+    random.style.backgroundColor = 'aquamarine';
+});
 
 const prevAns = document.querySelector('#prev-ans');
 prevAns.addEventListener('click', () => {
@@ -179,6 +200,9 @@ prevAns.addEventListener('mousedown', () => {
     prevAns.style.backgroundColor = 'yellow';
 });
 prevAns.addEventListener('mouseup', () => {
+    prevAns.style.backgroundColor = 'aquamarine';
+});
+prevAns.addEventListener('mouseleave', () => {
     prevAns.style.backgroundColor = 'aquamarine';
 });
 
@@ -203,6 +227,9 @@ openPar.addEventListener('mousedown', () => {
 openPar.addEventListener('mouseup', () => {
     openPar.style.backgroundColor = 'aquamarine';
 });
+openPar.addEventListener('mouseleave', () => {
+    openPar.style.backgroundColor = 'aquamarine';
+});
 
 const closePar = document.querySelector('#close-par');
 closePar.addEventListener('click', () => {
@@ -220,6 +247,9 @@ closePar.addEventListener('mousedown', () => {
 closePar.addEventListener('mouseup', () => {
     closePar.style.backgroundColor = 'aquamarine';
 });
+closePar.addEventListener('mouseleave', () => {
+    closePar.style.backgroundColor = 'aquamarine';
+});
 
 const negative = document.querySelector('#negative');
 negative.addEventListener('click', () => {
@@ -234,6 +264,9 @@ negative.addEventListener('mousedown', () => {
     negative.style.backgroundColor = 'yellow';
 });
 negative.addEventListener('mouseup', () => {
+    negative.style.backgroundColor = 'aquamarine';
+});
+negative.addEventListener('mouseleave', () => {
     negative.style.backgroundColor = 'aquamarine';
 });
 
