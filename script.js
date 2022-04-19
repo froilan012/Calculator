@@ -24,7 +24,12 @@ btn.forEach((button) => {
 
         a = 0;
         oper = 0;
-        console.log(input.textContent);
+    });
+    button.addEventListener('mousedown', () => {
+        button.style.backgroundColor = 'yellow';
+    });
+    button.addEventListener('mouseup', () => {
+        button.style.backgroundColor = 'aquamarine';
     });
 });
 
@@ -41,7 +46,12 @@ operator.forEach((button) => {
             .replaceAll('/','÷');
 
         oper = 1;
-        console.log(myArr);
+    });
+    button.addEventListener('mousedown', () => {
+        button.style.backgroundColor = 'yellow';
+    });
+    button.addEventListener('mouseup', () => {
+        button.style.backgroundColor = 'aquamarine';
     });
 });
 
@@ -59,6 +69,12 @@ clear.addEventListener('click', () => {
         oper = 1;
     }
 });
+clear.addEventListener('mousedown', () => {
+    clear.style.backgroundColor = 'yellow';
+});
+clear.addEventListener('mouseup', () => {
+    clear.style.backgroundColor = 'aquamarine';
+});
 
 const clearAll = document.querySelector('#clear-all');
 clearAll.addEventListener('click', () => {
@@ -71,6 +87,12 @@ clearAll.addEventListener('click', () => {
     prevAnswer = 0;
     a = 1;
     oper = 1;
+});
+clearAll.addEventListener('mousedown', () => {
+    clearAll.style.backgroundColor = 'yellow';
+});
+clearAll.addEventListener('mouseup', () => {
+    clearAll.style.backgroundColor = 'aquamarine';
 });
 
 const power = document.querySelector('#power');
@@ -87,6 +109,12 @@ power.addEventListener('click', () => {
         .replaceAll('/','÷');
 
     oper = 1;
+});
+power.addEventListener('mousedown', () => {
+    power.style.backgroundColor = 'yellow';
+});
+power.addEventListener('mouseup', () => {
+    power.style.backgroundColor = 'aquamarine';
 });
 
 const equals = document.querySelector('#equals');
@@ -105,6 +133,12 @@ equals.addEventListener('click', () => {
     a = 1;
     oper = 1;
 });
+equals.addEventListener('mousedown', () => {
+    equals.style.backgroundColor = 'yellow';
+});
+equals.addEventListener('mouseup', () => {
+    equals.style.backgroundColor = 'aquamarine';
+});
 
 const random = document.querySelector('#random');
 random.addEventListener('click', () => {
@@ -122,6 +156,12 @@ random.addEventListener('click', () => {
     a = 0;
     oper = 0;
 });
+random.addEventListener('mousedown', () => {
+    random.style.backgroundColor = 'yellow';
+});
+random.addEventListener('mouseup', () => {
+    random.style.backgroundColor = 'aquamarine';
+});
 
 const prevAns = document.querySelector('#prev-ans');
 prevAns.addEventListener('click', () => {
@@ -134,6 +174,12 @@ prevAns.addEventListener('click', () => {
 
     a = 0;
     oper = 0;
+});
+prevAns.addEventListener('mousedown', () => {
+    prevAns.style.backgroundColor = 'yellow';
+});
+prevAns.addEventListener('mouseup', () => {
+    prevAns.style.backgroundColor = 'aquamarine';
 });
 
 const openPar = document.querySelector('#open-par');
@@ -151,6 +197,12 @@ openPar.addEventListener('click', () => {
     .replaceAll('/','÷');
 
 });
+openPar.addEventListener('mousedown', () => {
+    openPar.style.backgroundColor = 'yellow';
+});
+openPar.addEventListener('mouseup', () => {
+    openPar.style.backgroundColor = 'aquamarine';
+});
 
 const closePar = document.querySelector('#close-par');
 closePar.addEventListener('click', () => {
@@ -162,6 +214,12 @@ closePar.addEventListener('click', () => {
     .replaceAll('/','÷');
 
 });
+closePar.addEventListener('mousedown', () => {
+    closePar.style.backgroundColor = 'yellow';
+});
+closePar.addEventListener('mouseup', () => {
+    closePar.style.backgroundColor = 'aquamarine';
+});
 
 const negative = document.querySelector('#negative');
 negative.addEventListener('click', () => {
@@ -171,6 +229,12 @@ negative.addEventListener('click', () => {
     .replaceAll(',', '')
     .replaceAll('*','x')
     .replaceAll('/','÷');
+});
+negative.addEventListener('mousedown', () => {
+    negative.style.backgroundColor = 'yellow';
+});
+negative.addEventListener('mouseup', () => {
+    negative.style.backgroundColor = 'aquamarine';
 });
 
 window.addEventListener('keydown', () => {
@@ -199,8 +263,6 @@ window.addEventListener('keydown', () => {
         myArr = [];
         a = 1;
         oper = 1;
-        console.log(myArr);
-        console.log(myStr);
    }
 
    if (event.key == "-" || event.key == "+" || event.key == "/" || event.key == "*") {

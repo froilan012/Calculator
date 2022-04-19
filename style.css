@@ -76,6 +76,7 @@ button {
     font-size: x-large;
     border: 5px solid black;
     border-radius:  20px;
+    background-color: aquamarine;
 }
 
 .footer {
